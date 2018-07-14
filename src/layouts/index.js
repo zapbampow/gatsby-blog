@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 const TopBar = props =>
-    <div style={{width:'1170px', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'flex-end'}} >
+    <div style={{width:'1140', height:'2.625em', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'flex-end'}} >
         <SearchBar />
         <BarLink to='https://www.instagram.com/storynosh'>Instagram</BarLink>
         <BarLink to='https://www.facebook.com/storynosh'>Facebook</BarLink>   
@@ -10,7 +10,7 @@ const TopBar = props =>
 
 const BarLink = props =>
     <span>
-        <Link to={props.to} style={{textShadow:'none', backgroundImage:'none', marginLeft:'1em', color:'#ffffff'}}>
+        <Link to={props.to} style={{textShadow:'none', backgroundImage:'none', marginLeft:'1em', color:'#ffffff', textDecoration:'none'}}>
             {props.children}
         </Link>
     </span>
@@ -24,9 +24,9 @@ const SearchBar = props =>
     </span>
 
 const Header = props =>
-    <div style={{display:'flex', justifyContent:'space-between', width:'1170', height:'100%'}}>
+    <div style={{display:'flex', justifyContent:'space-between', width:'1140', height:'100%'}}>
         <Link to='/' activeStyle={{ backgroundImage:'none' }}>
-            <img src="http://www.storynosh.com/wp-content/uploads/2018/06/Header.png" style={{ margin:'1em 0' }} />
+            <img src="http://www.storynosh.com/wp-content/uploads/2018/06/Header.png" style={{ margin:'0.9em 0' }} />
         </Link>
     </div>
 
@@ -39,7 +39,21 @@ const MenuLeft = props =>
 
 const MenuLeftItem = props =>
     <span style={{marginRight:'1em'}}>
-        <Link to={props.to}>
+        <Link to={props.to} style={{color:'#737373', backgroundImage:'none', textDecoration:'none'}}>
+            {props.children}
+        </Link>
+    </span>
+
+const MenuRight = props =>
+    <div>
+        <MenuRightItem to='/behind-the-scenes'>Behind the Scenes</MenuRightItem>
+        <MenuRightItem to='/about'>About</MenuRightItem>
+        <MenuRightItem to='/contact'>Contact</MenuRightItem>
+    </div>
+
+const MenuRightItem = props =>
+    <span style={{marginLeft:'1em'}}>
+        <Link to={props.to} style={{color:'#737373', backgroundImage:'none', textDecoration:'none' }}>
             {props.children}
         </Link>
     </span>
@@ -56,9 +70,9 @@ export default ({ children }) =>
         <Header />
     </div>
 
-    <div style={{width:"1170px", margin:0, display:'flex', justifyContent:'space-between'}}>
+    <div style={{width:"1140px", height:'2.5em', margin:0, display:'flex', justifyContent:'space-between', alignItems:'center'}}>
         <MenuLeft />
-        {/* <MenuRight /> */}
+        <MenuRight />
     </div>    
     {children()}
 
