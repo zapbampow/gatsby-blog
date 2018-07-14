@@ -12,10 +12,11 @@ const MostRecent = (props) =>
     </div>
 
 
+
+
 export default (props) =>
     <div style={{display:'flex', justifyContent:'center', width:'100%', backgroundColor:'grey'}}>
         <div style={{ width:1140, height:450, display:'grid', gridTemplateColumns:'68% 32%', gridTemplateRows:'50% 50%', gridTemplateAreas:`"most-recent second-most-recent" "most-recent third-most-recent"` }}>
-            {/* <div style={{ backgroundColor:'blue', gridArea:'most-recent', height:'100%', width:'100%' }}></div> */}
             <MostRecent />
             <div style={{ backgroundColor:'yellow', gridArea:'second-most-recent', height:'100%', width:'100%' }}></div>
             <div style={{ backgroundColor:'green', gridArea:'third-most-recent', height:'100%', width:'100%' }}></div>
