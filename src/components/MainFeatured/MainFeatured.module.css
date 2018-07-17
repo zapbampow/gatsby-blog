@@ -1,0 +1,45 @@
+.featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+}
+
+.most-recent {
+    background-color: blue;
+    grid-area: most-recent;
+}
+
+.second-most-recent {
+    background-color: purple;
+    grid-area: second-most-recent;
+}
+
+.third-most-recent {
+    background-color: green;
+    grid-area: third-most-recent;
+}
+
+.article-info-container {
+    margin: 0 0 1.8em 2.1em;
+}
+
+.featured-header {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 0.4em;
+}
+
+.category-box {
+    margin-right: 1em;
+    background-color: rgb(10, 57, 109);
+    color: rgb(255, 255, 255);
+    padding: 0.5em;
+    font-size: 0.9em;
+}
+
+.featured-date {
+    font-size: 0.9em;
+}

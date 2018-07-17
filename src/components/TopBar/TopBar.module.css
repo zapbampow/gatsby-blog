@@ -1,0 +1,38 @@
+.topbar {
+    width:100%;
+    height: 2.625em;
+    background-color:#cc5241; 
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbar-content {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.barlink {
+    text-shadow: none;
+    background-image: none;
+    margin-left: 1em;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.barlink:hover {
+    text-decoration: underline;
+}
+
+.searchbar {
+    background-color: #ffffff00;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px #ffffff solid;
+    margin-right: 1em;
+}

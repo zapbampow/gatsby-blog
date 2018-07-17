@@ -1,0 +1,25 @@
+.navbar {
+    height:2.5em;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.menuitem {
+    color:#737373;
+    background-image: none;
+    text-decoration: none;
+}
+
+.menuitem:hover {
+    text-decoration: underline;
+}
+
+.menurightitem {
+    margin-left: 1em;
+}
+
+.menuleftitem {
+    margin-right: 1em;
+}

@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    border-bottom: 1px #efefef solid;
+    display:flex;
+    justify-content: center;
+}
+
+.header_centered {
+    display:flex; 
+    justify-content:space-between; 
+    width:1140px; 
+    height:100%;
+}
+
+.menuleft {
+
+}
+
+.menuleftitem {
+
+}
+
+.menuright {
+
+}
+
+.menurightitem {
+
+}
