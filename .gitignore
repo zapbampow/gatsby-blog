@@ -60,3 +60,7 @@ typings/
 .cache/
 public
 yarn-error.log
+
+#gatsby-source-wordpress sensitive data
+#htaccess login and passwords
+.env.development

@@ -5,6 +5,8 @@ import CenterContainer from '../CenterContainer';
 
 import styles from './Navbar.module.css'
 
+import '../../../node_modules/react-fontawesome'
+
 const Navbar = props =>
     <CenterContainer>
         <div className={styles.navbar}>
