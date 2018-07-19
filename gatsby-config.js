@@ -3,6 +3,12 @@ require("dotenv").config({
   });
 
 module.exports = {
+    siteMetadata:{
+      title:'StoryNoshNoshNosh',
+      siteUrl:'https://www.storynosh.com',
+      description:'A story-driven food blog.'
+    },
+    
     plugins: [
         {
             resolve: 'gatsby-plugin-typography',
@@ -29,16 +35,23 @@ module.exports = {
               // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
               // This feature is untested for sites hosted on Wordpress.com.
               // Defaults to true.
-              useACF: true,
+              useACF: false,
               // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
               // It can help you debug specific API Endpoints problems.
               verboseOutput: true,
               // Set how many pages are retrieved per API request.
               perPage: 100,
-              
               // Set how many simultaneous requests are sent at once.
               concurrentRequests: 10,
-              
+              // Exclude specific routes using glob parameters
+              // See: https://github.com/isaacs/minimatch
+              // Example:  `["/*/*/comments", "/yoast/**"]` will exclude routes ending in `comments` and
+              // all routes that begin with `yoast` from fetch.
+              excludedRoutes: ["/*/*/comments", "/yoast/**"],
+              // use a custom normalizer which is applied after the built-in ones.
+              normalizer: function({ entities }) {
+                return entities;
+              },
             },
           },
     ]

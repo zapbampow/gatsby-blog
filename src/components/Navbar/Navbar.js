@@ -2,18 +2,20 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import CenterContainer from '../CenterContainer';
+import WideContainer from '../WideContainer';
 
 import styles from './Navbar.module.css'
 
-import '../../../node_modules/react-fontawesome'
 
 const Navbar = props =>
-    <CenterContainer>
-        <div className={styles.navbar}>
-        <MenuLeft />
-        <MenuRight />
-        </div>
-    </CenterContainer>
+    <WideContainer className={'bottom-grey-border'}>
+        <CenterContainer>
+            <div className={styles.navbar}>
+            <MenuLeft />
+            <MenuRight />
+            </div>
+        </CenterContainer>
+    </WideContainer>
 
 const MenuLeft = props =>
     <div>
