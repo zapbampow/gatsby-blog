@@ -10,6 +10,7 @@
 .most-recent {
     background-color: blue;
     grid-area: most-recent;
+    background-size: cover;
 }
 
 .second-most-recent {
@@ -38,6 +39,15 @@
     color: rgb(255, 255, 255);
     padding: 0.5em;
     font-size: 0.9em;
+    text-decoration: none;
+}
+
+.category-box:hover {
+    text-decoration: underline;
+}
+
+.category-box-link {
+    text-decoration: none;
 }
 
 .featured-date {
