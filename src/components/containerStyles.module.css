@@ -6,3 +6,8 @@
     border-bottom: 1px solid #efefef;
 }
 
+.home-section {
+    margin: 3em 0 3em 0;
+    /* Change the bottom margin back to 0 later */
+}
+

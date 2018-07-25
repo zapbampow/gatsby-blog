@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import MainFeatured from '../components/MainFeatured/MainFeatured';
-import CenterContainer from '../components/CenterContainer'
+import StoriesSection from '../components/StoriesSection/StoriesSection';
+import CenterContainer from '../components/CenterContainer';
 
 
 
@@ -8,6 +9,7 @@ export default ( {data} ) =>  {
     return (
         <div style={{width:'100%'}}>
             <MainFeatured data={data.mainSection} />
+            <StoriesSection data={data.storiesSection} />
         </div>
     )
 
@@ -41,7 +43,8 @@ query homepageQuery {
         node {
           id
           title
-          date
+          excerpt
+          date (formatString: "MMM DD, YYYY")
           featured_media {
             source_url
             alt_text
@@ -60,7 +63,8 @@ query homepageQuery {
         node {
           id
           title
-          date
+          excerpt
+          date (formatString: "MMM DD, YYYY")
           featured_media {
             source_url
             alt_text
@@ -79,7 +83,8 @@ query homepageQuery {
         node {
           id
           title
-          date
+          excerpt
+          date (formatString: "MMM DD, YYYY")
           featured_media {
             source_url
             alt_text

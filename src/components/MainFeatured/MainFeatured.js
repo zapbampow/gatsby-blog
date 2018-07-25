@@ -1,15 +1,9 @@
 import React, {Component} from 'react';
 import Link from 'gatsby-link';
 import WideContainer from '../WideContainer';
+import htmlDecode from '../../utils/htmlDecode'
 
 import styles from './MainFeatured.module.css'
-
-function htmlDecode(input){
-    var e = document.createElement('div');
-    e.innerHTML = input;
-    // handle case of empty input
-    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
-  }
 
 class MostRecent extends Component {
     render(){
