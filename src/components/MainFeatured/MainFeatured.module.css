@@ -8,7 +8,7 @@
 }
 
 .most-recent {
-    background-color: blue;
+    background: linear-gradient(#00000022, #00000022);    
     grid-area: most-recent;
     background-size: cover;
 }
@@ -16,11 +16,13 @@
 .second-most-recent {
     background-color: purple;
     grid-area: second-most-recent;
+    background-size: cover;
 }
 
 .third-most-recent {
     background-color: green;
     grid-area: third-most-recent;
+    background-size:cover;
 }
 
 .article-info-container {
@@ -31,6 +33,7 @@
     color: #fff;
     font-weight: 400;
     margin-bottom: 0.4em;
+    text-shadow: 0 0 15px #000000;
 }
 
 .category-box {
