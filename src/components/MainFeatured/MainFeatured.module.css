@@ -55,4 +55,10 @@
 
 .featured-date {
     font-size: 0.9em;
+    text-shadow: 0 0 10px #000000;
+}
+
+.linked {
+    color: #ffffff;
+    text-decoration: none;
 }

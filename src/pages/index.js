@@ -13,12 +13,9 @@ export default ( {data} ) =>  {
 
 }
 
-
-
-
 export const homepageQuery = graphql`
 query homepageQuery {
-    mainSection: allWordpressPost(limit: 3) {
+    mainSection: allWordpressPost(sort: {fields: [date], order: DESC,}, limit: 3) {
       edges {
         node {
           id

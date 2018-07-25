@@ -20,7 +20,9 @@ class MostRecent extends Component {
         return (
             <div className={`${styles.featured} ${styles['most-recent']}`} style={{backgroundImage: bgimage}} >
                 <div className={styles['article-info-container']} >
-                    <h1 className={styles['featured-header']} >{title}</h1>
+                    <Link to={this.props.data.slug} className={styles.linked}>
+                        <h1 className={styles['featured-header']} >{title}</h1>
+                    </Link>
                     <div>
                         <Link to={this.props.data.categories[0].link} className={styles['category-box-link']}>
                             <span className={styles['category-box']}>{this.props.data.categories[0].name}</span>
@@ -42,7 +44,9 @@ class SecondMostRecent extends Component {
         return (
             <div className={`${styles.featured} ${styles['second-most-recent']}`} style={{backgroundImage: bgimage}} >
                 <div className={styles['article-info-container']} >
-                    <h3 className={styles['featured-header']} >{title}</h3>
+                    <Link to={this.props.data.slug} className={styles.linked}>
+                        <h3 className={styles['featured-header']} >{title}</h3>
+                    </Link>
                     <div>
                         <Link to={this.props.data.categories[0].link} className={styles['category-box-link']}>
                             <span className={styles['category-box']}>{this.props.data.categories[0].name}</span>
@@ -64,7 +68,9 @@ class ThirdMostRecent extends Component {
         return (
             <div className={`${styles.featured} ${styles['third-most-recent']}`} style={{backgroundImage: bgimage}} >
                 <div className={styles['article-info-container']} >
-                    <h3 className={styles['featured-header']} >{title}</h3>
+                    <Link to={this.props.data.slug} className={styles.linked}>
+                        <h3 className={styles['featured-header']} >{title}</h3>
+                    </Link>
                     <div>
                         <Link to={this.props.data.categories[0].link} className={styles['category-box-link']}>
                             <span className={styles['category-box']}>{this.props.data.categories[0].name}</span>
@@ -84,7 +90,6 @@ export default (props) =>
             <MostRecent data={props.data.edges[0].node} />
             <SecondMostRecent data={props.data.edges[1].node} />
             <ThirdMostRecent data={props.data.edges[2].node} />
-            <p>{props.data.edges[0].node.title}</p>
         </div>
     </WideContainer>
 
