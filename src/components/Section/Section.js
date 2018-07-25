@@ -5,16 +5,16 @@ import CenterContainer from '../CenterContainer';
 import htmlDecode from '../../utils/htmlDecode';
 import shortenExcerpt from '../../utils/shortenExcerpt';
 
-import styles from './StoriesSection.module.css'
+import styles from './Section.module.css'
 
-class StoriesSection extends Component {
+class Section extends Component {
     render() {
         return(
             <WideContainer className='home-section'>
                 <CenterContainer>
                 <div style={{width:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'  }}>
                         <div className={styles['section-header']} >
-                            <span className={styles['section-title']} >Stories</span>
+                            <span className={styles['section-title']} >{this.props.sectionTitle}</span>
                             <span className={styles.hline}></span>
                         </div>
 
@@ -52,4 +52,4 @@ class StoriesSection extends Component {
     }
 }
 
-export default StoriesSection;
+export default Section;

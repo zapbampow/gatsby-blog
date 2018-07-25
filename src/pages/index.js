@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MainFeatured from '../components/MainFeatured/MainFeatured';
-import StoriesSection from '../components/StoriesSection/StoriesSection';
+import Section from '../components/Section/Section';
 import CenterContainer from '../components/CenterContainer';
 
 
@@ -9,7 +9,9 @@ export default ( {data} ) =>  {
     return (
         <div style={{width:'100%'}}>
             <MainFeatured data={data.mainSection} />
-            <StoriesSection data={data.storiesSection} />
+            <Section data={data.storiesSection} sectionTitle='Stories' />
+            <Section data={data.foodSection} sectionTitle='Food' />
+            <Section data={data.recipesSection} sectionTitle='Recipes' />
         </div>
     )
 
