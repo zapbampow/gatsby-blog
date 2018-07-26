@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MainFeatured from '../components/MainFeatured/MainFeatured';
 import Section from '../components/Section/Section';
 import CenterContainer from '../components/CenterContainer';
+import Footer from '../components/Footer/Footer';
 
 
 
@@ -12,6 +13,7 @@ export default ( {data} ) =>  {
             <Section data={data.storiesSection} sectionTitle='Stories' />
             <Section data={data.foodSection} sectionTitle='Food' />
             <Section data={data.recipesSection} sectionTitle='Recipes' />
+            <Footer data={data.mainSection} />
         </div>
     )
 

@@ -2,6 +2,14 @@
     background-color: #e0e0e0;
 }
 
+.bg-footer-top {
+    background-color: #001228;
+}
+
+.bg-footer-bottom {
+    background-color: #000f20;
+}
+
 .bottom-grey-border {
     border-bottom: 1px solid #efefef;
 }
@@ -9,5 +17,9 @@
 .home-section {
     margin: 3em 0 3em 0;
     /* Change the bottom margin back to 0 later */
+}
+
+.footer-bottom-margin {
+    margin: 1em 0;
 }
 

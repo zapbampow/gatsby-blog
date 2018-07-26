@@ -1,6 +1,9 @@
-import React from 'react';
+import React from "react";
+import styles from './containerStyles.module.css';
 
-export default ({children}) =>
-    <div style={{ width:1140, margin:0}}>
-        {children}
-    </div>
+export default (props) => (
+
+    (props.className) 
+      ? <div style={{ width:1140 }} className={styles[props.className]} >{props.children}</div>
+      : <div style={{ width:1140 }} className='' >{props.children}</div>
+);
