@@ -3,6 +3,7 @@ import styles from './Footer.module.css';
 import WideContainer from '../WideContainer';
 // import Link from 'gatsby-link';
 import CenterContainer from '../CenterContainer';
+import Link from 'gatsby-link';
 
 class RecentPosts extends Component {
     render() {
@@ -11,7 +12,7 @@ class RecentPosts extends Component {
                 <h3>Recent Posts</h3>
                 <ul>
                     {this.props.data.edges.map(({node}, index) =>
-                        <li key={index}>{node.title}</li>
+                        <li key={index}><Link to={node.slug} className={styles.link}>{node.title}</Link></li>
                     )}
                 </ul>
             </div>
