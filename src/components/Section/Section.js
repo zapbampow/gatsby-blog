@@ -2,7 +2,12 @@ import React, {Component} from 'react';
 import Link from 'gatsby-link';
 import WideContainer from '../WideContainer';
 import CenterContainer from '../CenterContainer';
-import htmlDecode from '../../utils/htmlDecode';
+
+// let htmlDecode = null;
+// if (typeof document !== `undefined`) {
+//     htmlDecode = require('../../utils/htmlDecode')
+// }
+
 import shortenExcerpt from '../../utils/shortenExcerpt';
 
 import styles from './Section.module.css'
@@ -21,9 +26,10 @@ class Section extends Component {
                         <div className={styles['section-posts']}>
 
                             {this.props.data.edges.map(({node}, index) => {
-                                let title = htmlDecode(node.title);
-                                let excerpt = htmlDecode(shortenExcerpt(node.excerpt));
-                                
+                                // let title = htmlDecode(node.title);
+                                // let excerpt = htmlDecode(shortenExcerpt(node.excerpt));
+                                let excerpt = shortenExcerpt(node.excerpt);
+
                                 return (
                                     <div key={index} className={styles['article-info-container']} >
                                         <div className={styles['post-img']}>
@@ -32,7 +38,7 @@ class Section extends Component {
                                         </Link>
                                         </div>
                                         <Link to={node.slug} className={styles.linked}>
-                                            <h3 className={styles['featured-header']} >{title}</h3>
+                                            <h3 className={styles['featured-header']} dangerouslySetInnerHTML={{__html: node.title}} > </h3>
                                         </Link>
                                         <div>
                                             <Link to={node.categories[0].link} className={styles['category-box-link']}>
@@ -40,7 +46,7 @@ class Section extends Component {
                                             </Link>
                                             <span className={styles['featured-date']}>{node.date}</span>
                                         </div>
-                                        <div className={styles.excerpt} >{excerpt}</div>
+                                        <div className={styles.excerpt} dangerouslySetInnerHTML={{__html:excerpt}} ></div>
                                     </div>
                                 )}
                             )}

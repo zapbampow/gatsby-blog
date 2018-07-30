@@ -60,12 +60,12 @@ class Footer extends Component {
                         <nav className={styles['footer-bottom']}>
                             <span className={styles.copyright}>&copy; 2018 - Clayton Ingalls</span>
                             <ul className={styles['bottom-nav']}>
-                                <li>Stories</li>
-                                <li>Food</li>
-                                <li>Recipes</li>
-                                <li>Behind the Scenes</li>
-                                <li>About</li>
-                                <li>Contact</li>
+                                <li><Link to='/category/stories' className={styles.link}>Stories</Link></li>
+                                <li><Link to='/category/food' className={styles.link}>Food</Link></li>
+                                <li><Link to='/category/recipes' className={styles.link}>Recipes</Link></li>
+                                <li><Link to='/category/behind-the-scenes' className={styles.link}>Behind the Scenes</Link></li>
+                                <li><Link to='/about' className={styles.link}>About</Link></li>
+                                <li><Link to='/contact' className={styles.link}>Contact</Link></li>
                             </ul>
                         </nav>
                     </CenterContainer>

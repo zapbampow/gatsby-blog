@@ -19,9 +19,9 @@ const Navbar = props =>
 
 const MenuLeft = props =>
     <div>
-        <MenuLeftItem to='/stories'>Stories</MenuLeftItem>
-        <MenuLeftItem to='/food'>Food</MenuLeftItem>
-        <MenuLeftItem to='/recipes'>Recipes</MenuLeftItem>
+        <MenuLeftItem to='/category/stories'>Stories</MenuLeftItem>
+        <MenuLeftItem to='/category/food'>Food</MenuLeftItem>
+        <MenuLeftItem to='/category/recipes'>Recipes</MenuLeftItem>
     </div>
 
 const MenuLeftItem = props =>
@@ -33,7 +33,7 @@ const MenuLeftItem = props =>
 
 const MenuRight = props =>
     <div>
-        <MenuRightItem to='/behind-the-scenes'>Behind the Scenes</MenuRightItem>
+        <MenuRightItem to='/category/behind-the-scenes'>Behind the Scenes</MenuRightItem>
         <MenuRightItem to='/about'>About</MenuRightItem>
         <MenuRightItem to='/contact'>Contact</MenuRightItem>
     </div>

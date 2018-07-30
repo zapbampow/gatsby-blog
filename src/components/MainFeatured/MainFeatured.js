@@ -1,21 +1,17 @@
 import React, {Component} from 'react';
 import Link from 'gatsby-link';
 import WideContainer from '../WideContainer';
-import htmlDecode from '../../utils/htmlDecode'
-
 import styles from './MainFeatured.module.css'
 
 class MostRecent extends Component {
     render(){
         const bgimage = `url(${this.props.data.featured_media.source_url})`;
 
-        const title = htmlDecode(this.props.data.title);
-
         return (
             <div className={`${styles.featured} ${styles['most-recent']}`} style={{backgroundImage: bgimage}} >
                 <div className={styles['article-info-container']} >
                     <Link to={this.props.data.slug} className={styles.linked}>
-                        <h1 className={styles['featured-header']} >{title}</h1>
+                        <h1 className={styles['featured-header']} dangerouslySetInnerHTML={{__html: this.props.data.title}}></h1>
                     </Link>
                     <div>
                         <Link to={this.props.data.categories[0].link} className={styles['category-box-link']}>
@@ -33,13 +29,11 @@ class SecondMostRecent extends Component {
     render() {
         const bgimage = `url(${this.props.data.featured_media.source_url})`
 
-        const title = htmlDecode(this.props.data.title);
-
         return (
             <div className={`${styles.featured} ${styles['second-most-recent']}`} style={{backgroundImage: bgimage}} >
                 <div className={styles['article-info-container']} >
                     <Link to={this.props.data.slug} className={styles.linked}>
-                        <h3 className={styles['featured-header']} >{title}</h3>
+                        <h3 className={styles['featured-header']} dangerouslySetInnerHTML={{__html: this.props.data.title}}></h3>
                     </Link>
                     <div>
                         <Link to={this.props.data.categories[0].link} className={styles['category-box-link']}>
@@ -57,13 +51,11 @@ class ThirdMostRecent extends Component {
     render() {
         const bgimage = `url(${this.props.data.featured_media.source_url})`
 
-        const title = htmlDecode(this.props.data.title);
-
         return (
             <div className={`${styles.featured} ${styles['third-most-recent']}`} style={{backgroundImage: bgimage}} >
                 <div className={styles['article-info-container']} >
                     <Link to={this.props.data.slug} className={styles.linked}>
-                        <h3 className={styles['featured-header']} >{title}</h3>
+                        <h3 className={styles['featured-header']} dangerouslySetInnerHTML={{__html: this.props.data.title}} ></h3>
                     </Link>
                     <div>
                         <Link to={this.props.data.categories[0].link} className={styles['category-box-link']}>

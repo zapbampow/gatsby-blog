@@ -64,3 +64,9 @@ yarn-error.log
 #gatsby-source-wordpress sensitive data
 #htaccess login and passwords
 .env.development
+
+# TODO
+todo.md
+
+# VS Code workspace
+gatsby-blog.code-workspace
