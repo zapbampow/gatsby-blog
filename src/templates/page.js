@@ -7,9 +7,14 @@ class PageTemplate extends Component {
     const currentPage = this.props.data.wordpressPage
 
     return (
-      <CenterContainer>
-        <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
-        <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
+      <CenterContainer className="post-page" >
+        <div style={{width:'760px'}} >
+          <h1 dangerouslySetInnerHTML={{ __html: currentPage.title }} />
+          <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
+        </div>
+
+        <div style={{width:'380px', height:'500px', backgroundColor:'red'}} ></div>
+
       </CenterContainer>
     )
   }
