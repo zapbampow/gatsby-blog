@@ -9,8 +9,10 @@ class PostTemplate extends Component {
 
     return (
         <CenterContainer>
-            <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-            <p dangerouslySetInnerHTML={{ __html: post.author.id }} />
+            <h1 dangerouslySetInnerHTML={{ __html: post.title }} style={{ marginTop:'0.5em' }} />
+            <div style={{ maxWidth:'100%', height:'auto' }}>
+              <img src={post.featured_media.source_url} alt={post.featured_media.alt_text} />
+            </div>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </CenterContainer>
     )
@@ -25,8 +27,11 @@ export const postQuery = graphql`
     wordpressPost(id: { eq: $id }) {
       title
       content
+      featured_media {
+        source_url
+      }
       author {
-          id
+          name
       }
     }
   }
