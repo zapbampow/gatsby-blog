@@ -6,24 +6,23 @@ import CenterContainer from '../CenterContainer';
 import Link from 'gatsby-link';
 
 class RecentPosts extends Component {
-    render() {
+    render(){
         return (
             <div className={`${styles['recent-posts']} ${styles['footer-section']}`}>
                 <h3>Recent Posts</h3>
                 <ul>
                     {this.props.data.edges.map(({node}, index) =>
-                        <li key={index}><Link to={node.slug} className={styles.link}>{node.title}</Link></li>
+                        <li key={node.id}><Link to={node.slug} className={styles.link}><span dangerouslySetInnerHTML={{__html:node.title}}></span></Link></li>
                     )}
                 </ul>
             </div>
         )
     }
-}
+};
 
-class Footer extends Component {
-    render(){
+const Footer = ({data}) => {
         return(
-            <div>
+            <div style={{width:'100%', marginTop:'1em'}}>
                 <WideContainer className='bg-footer-top'>
                     <div style={{marginTop: '2em'}}>
                         <CenterContainer>
@@ -34,7 +33,7 @@ class Footer extends Component {
                                     <p>We are more interested in interaction than consumption. We are hanging out with restaurant owners and bringing you their stories a few bites at a time.</p>
                                 </section>
 
-                                <RecentPosts data={this.props.data} />
+                                <RecentPosts data={data} />
 
                                 <section className={`${styles.contact} ${styles['footer-section']}`}>
                                     <h3>Connect</h3>
@@ -71,7 +70,7 @@ class Footer extends Component {
                     </CenterContainer>
                 </WideContainer>
             </div>
-        )}
-}
+        )
+};
 
 export default Footer;
