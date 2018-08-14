@@ -70,3 +70,6 @@ todo.md
 
 # VS Code workspace
 gatsby-blog.code-workspace
+
+#gatsby-config for use in development
+gatsby-config-dev.js
