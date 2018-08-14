@@ -6,7 +6,7 @@ module.exports = {
     siteMetadata:{
       title:'StoryNoshNoshNosh',
       // siteUrl:'localhost/wp',  //for use while developing on my local machine so I don't blast my webhost with requests
-      siteURL:'https://www.storynosh.com',
+      siteUrl:'https://www.storynosh.com',
       description:'A story-driven food blog.'
     },
     
