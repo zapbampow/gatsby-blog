@@ -4,6 +4,7 @@ const _ = require(`lodash`);
 const Promise = require(`bluebird`);
 const path = require(`path`);
 const slash = require(`slash`);
+// const createPaginatedPages = require("gatsby-paginate");
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
@@ -103,9 +104,49 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             });
           });
           resolve();
-        });
+        })
+      // ==== END POSTS ====
+
+      //   .then(()=>{
+      //     graphql`
+      //       query allPostQuery {
+      //           allWordpressPost {
+      //             edges {
+      //               node {
+      //                 id
+      //                 title
+      //                 excerpt
+      //                 date (formatString: "MMM DD, YYYY")
+      //                 featured_media {
+      //                   source_url
+      //                   alt_text
+      //                 }
+      //                 slug
+      //                 categories {
+      //                   id
+      //                   name
+      //                   link
+      //                 }
+                      
+      //               }
+      //             }
+      //           }
+      //       `
+      //     .then(result => {
+      //     createPaginatedPages({
+      //       edges: result.allWordpressPost.edges,
+      //       createPage: createPage,
+      //       pageTemplate: "src/templates/allPosts.js",
+      //       pageLength: 5,
+      //       pathPrefix: "posts",
+      //       buildPath: (index, pathPrefix) => index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}` // This is optional and this is the default
+      //     })
+      //     })
+      //   }
+
+      // )
+        // ;
       });
-    // ==== END POSTS ====
   });
 };
 
