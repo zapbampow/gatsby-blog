@@ -5,7 +5,8 @@ require("dotenv").config({
 module.exports = {
     siteMetadata:{
       title:'StoryNoshNoshNosh',
-      siteUrl:'https://www.storynosh.com',
+      // siteUrl:'localhost/wp',  //for use while developing on my local machine so I don't blast my webhost with requests
+      siteURL:'https://www.storynosh.com',
       description:'A story-driven food blog.'
     },
     
@@ -24,9 +25,9 @@ module.exports = {
                * The base URL of the Wordpress site without the trailingslash and the protocol. This is required.
                * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
                */
-              baseUrl: "storynosh.com",
+              baseUrl: "localhost/wp",
               // The protocol. This can be http or https.
-              protocol: "https",
+              protocol: "http",
               // Indicates whether the site is hosted on wordpress.com.
               // If false, then the assumption is made that the site is self hosted.
               // If true, then the plugin will source its content on wordpress.com using the JSON REST API V2.
