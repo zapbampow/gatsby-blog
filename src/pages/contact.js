@@ -7,6 +7,8 @@ return (<div style={{width:'100%', display:'flex', flexDirection:'column', align
             <h1>Contact Story Nosh!</h1>
 
             <form name="contact" method="POST" netlify>
+            <input type="hidden" name="contact" value="contact" />
+
                 <p>
                     <label>Your Name: <input type="text" name="name" required style={{width:'100%'}}/></label>   
                 </p>
