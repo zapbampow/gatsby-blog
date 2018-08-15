@@ -8,7 +8,7 @@ const Header = props =>
         <div className={styles.header}>
             <div className={styles.header_centered}>
                 <Link to='/' activeStyle={{ backgroundImage:'none' }}>
-                    <img src="http://www.storynosh.com/wp-content/uploads/2018/06/Header.png" style={{ margin:'0.9em 0' }} />
+                    <img src="https://www.storynosh.com/wp-content/uploads/2018/06/Header.png" style={{ margin:'0.9em 0' }} />
                 </Link>
             </div>
         </div>
