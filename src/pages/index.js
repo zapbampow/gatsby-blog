@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import MainFeatured from '../components/MainFeatured/MainFeatured';
 import Section from '../components/Section/Section';
-import CenterContainer from '../components/CenterContainer';
 import Footer from '../components/Footer/Footer';
 
 

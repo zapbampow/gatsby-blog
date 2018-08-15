@@ -1,7 +1,5 @@
-import React, {Component} from 'react';
-import MainFeatured from '../../components/MainFeatured/MainFeatured';
+import React from 'react';
 import CatSection from '../../components/CatSection/CatSection';
-import CenterContainer from '../../components/CenterContainer';
 import Footer from '../../components/Footer/Footer';
 
 
