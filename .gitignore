@@ -65,8 +65,8 @@ yarn-error.log
 #htaccess login and passwords
 .env.development
 
-# TODO
-todo.md
+# # TODO
+# todo.md
 
 # VS Code workspace
 gatsby-blog.code-workspace
